@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Sidebar } from "@/components/Sidebar";
 import { Topbar } from "@/components/Topbar";
+import { StatusBar } from "@/components/StatusBar";
 import { WorldMap } from "@/components/WorldMap";
 import { CountryPanel } from "@/components/CountryPanel";
 import { HoverCard } from "@/components/HoverCard";
@@ -40,6 +41,7 @@ export default function App() {
 
       <div className="flex min-w-0 flex-1 flex-col">
         <Topbar />
+        <StatusBar />
         <main className="relative flex-1">
           <WorldMap
             selectedId={selected?.id ?? null}

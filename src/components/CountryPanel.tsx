@@ -47,8 +47,8 @@ export function CountryPanel({
             onClose={onClose}
             onToggleFavourite={onToggleFavourite}
           />
-          <div className="flex-1 overflow-y-auto scroll-soft px-5 pb-8">
-            <Tabs defaultValue="overview" className="mt-4">
+          <div className="flex-1 overflow-y-auto scroll-soft px-5 pb-10">
+            <Tabs defaultValue="overview" className="mt-5">
               <TabsList>
                 <TabsTrigger value="overview">Overview</TabsTrigger>
                 <TabsTrigger value="economy">Economy</TabsTrigger>
@@ -100,14 +100,14 @@ function PanelHeader({
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="text-lg font-semibold tracking-tight">
+              <h2 className="text-xl font-semibold tracking-tight">
                 {country.name}
               </h2>
-              <span className="text-[10px] font-medium uppercase tracking-wider text-ink-subtle">
+              <span className="text-[11px] font-medium uppercase tracking-wider text-ink-subtle">
                 {country.iso3}
               </span>
             </div>
-            <div className="mt-0.5 text-xs text-ink-muted">
+            <div className="mt-1 text-sm text-ink-muted">
               {country.capital} · {country.region} · {formatNumber(country.population)} people
             </div>
           </div>

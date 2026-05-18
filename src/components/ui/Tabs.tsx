@@ -60,7 +60,7 @@ export function TabsTrigger({
       type="button"
       onClick={() => ctx.setValue(value)}
       className={cn(
-        "flex-1 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors",
+        "flex-1 rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors",
         active
           ? "bg-ink text-white shadow-soft"
           : "text-ink-muted hover:text-ink hover:bg-surface-sunken",

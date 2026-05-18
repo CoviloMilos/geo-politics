@@ -27,37 +27,37 @@ export function HoverCard({ country }: Props) {
 
   return (
     <div
-      className="pointer-events-none fixed z-30 w-[260px] rounded-xl border border-line bg-surface/95 p-3 shadow-panel backdrop-blur"
+      className="pointer-events-none fixed z-30 w-[280px] rounded-xl border border-line bg-surface/95 p-3.5 shadow-panel backdrop-blur"
       style={{ left: x, top: y }}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-base leading-none">{country.flag}</span>
-          <span className="text-sm font-semibold tracking-tight">{country.name}</span>
+          <span className="text-lg leading-none">{country.flag}</span>
+          <span className="text-[15px] font-semibold tracking-tight">{country.name}</span>
         </div>
         <Badge variant={country.status === "stable" ? "stable" : country.status}>
           {country.status}
         </Badge>
       </div>
-      <div className="mt-2 grid grid-cols-2 gap-1 text-[11px] text-ink-muted">
+      <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-sm">
         <div>
           <div className="uppercase tracking-wider text-[10px] text-ink-subtle">GDP</div>
-          <div className="text-ink font-medium">{formatTrillions(country.economy.gdp)}</div>
+          <div className="text-ink font-semibold">{formatTrillions(country.economy.gdp)}</div>
         </div>
         <div>
           <div className="uppercase tracking-wider text-[10px] text-ink-subtle">Population</div>
-          <div className="text-ink font-medium">{formatNumber(country.population)}</div>
+          <div className="text-ink font-semibold">{formatNumber(country.population)}</div>
         </div>
         <div>
-          <div className="uppercase tracking-wider text-[10px] text-ink-subtle">Govt</div>
-          <div className="text-ink font-medium capitalize">{country.government}</div>
+          <div className="uppercase tracking-wider text-[10px] text-ink-subtle">Government</div>
+          <div className="text-ink font-semibold capitalize">{country.government}</div>
         </div>
         <div>
           <div className="uppercase tracking-wider text-[10px] text-ink-subtle">Mil rank</div>
-          <div className="text-ink font-medium">#{country.military.globalRank}</div>
+          <div className="text-ink font-semibold">#{country.military.globalRank}</div>
         </div>
       </div>
-      <div className="mt-2 text-[10px] uppercase tracking-wider text-ink-subtle">
+      <div className="mt-3 border-t border-line pt-2 text-[10px] uppercase tracking-wider text-ink-subtle">
         Click to open full profile
       </div>
     </div>
