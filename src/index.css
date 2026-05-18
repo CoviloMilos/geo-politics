@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.005em;
+}
+
+/* Subtle scrollbar for panels */
+.scroll-soft::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scroll-soft::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+  border-radius: 999px;
+}
+.scroll-soft::-webkit-scrollbar-thumb:hover {
+  background: #d4d4d8;
+}
+.scroll-soft::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Map glow keyframes for watchlist hover */
+@keyframes pulse-ring {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(10,10,11,0)); }
+  50%      { filter: drop-shadow(0 0 6px rgba(10,10,11,0.35)); }
+}
+.country-glow {
+  animation: pulse-ring 1.8s ease-in-out infinite;
+}
